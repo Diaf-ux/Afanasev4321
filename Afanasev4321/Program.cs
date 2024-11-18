@@ -1,15 +1,22 @@
 using NLog;
 using NLog.Web;
+using Microsoft.EntityFrameworkCore;
+using Afanasev4321.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
-// Add services to the container.
+
 try
 {
+    // Add services to the container.
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+
+    // Добавляем контекст базы данных в контейнер служб
+    builder.Services.AddDbContext<UniversityDbContext>(options =>
+        options.UseNpgsql(builder.Configuration.GetConnectionString("UniversityDatabase")));
 
     var app = builder.Build();
 
@@ -26,9 +33,10 @@ try
 
     app.Run();
 }
-catch(Exception ex)
+catch (Exception ex)
 {
     logger.Error(ex, "Stopped program because of exception");
+    throw; // Это полезно, чтобы сразу увидеть исключение в логах
 }
 finally
 {
