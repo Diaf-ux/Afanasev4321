@@ -8,10 +8,13 @@ namespace Afanasev4321.Models
     {
         [Key] // Первичный ключ
         public int DepartmentId { get; set; }
+
         public required string DepartmentName { get; set; } // Обязательное поле
+
         public int? TeacherHeaderId { get; set; }
+
         [JsonIgnore]
-        public required Teacher Teacher { get; set; } // Обязательное поле
+        public Teacher? Teacher { get; set; } // Сделаем свойство `Teacher` nullable и уберем required
 
         public bool isValidDepartmentName()
         {

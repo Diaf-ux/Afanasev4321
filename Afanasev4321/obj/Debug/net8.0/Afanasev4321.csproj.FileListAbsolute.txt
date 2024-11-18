@@ -5,8 +5,13 @@ E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\
 E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\Afanasev4321.runtimeconfig.json
 E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\Afanasev4321.dll
 E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\Afanasev4321.pdb
+E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\AutoMapper.dll
+E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\Azure.Core.dll
 E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\Azure.Identity.dll
+E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\FluentValidation.dll
+E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\Humanizer.dll
 E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 E:\7th semester\Проектный практикум\Afanasev4321\Afanasev4321\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
