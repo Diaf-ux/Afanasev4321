@@ -69,6 +69,36 @@ namespace Afanasev4321.Controllers
             return Ok(teacherDTOs);
         }
 
+        [HttpGet("filter-by-department/{departmentId}")]
+        public async Task<IActionResult> GetTeachersByDepartment(int departmentId)
+        {
+            // Проверяем наличие кафедры с таким ID
+            var departmentExists = await _context.Departments.AnyAsync(d => d.DepartmentId == departmentId);
+            if (!departmentExists)
+            {
+                return NotFound(new { message = "Кафедра с указанным ID не найдена" });
+            }
+
+            // Получаем преподавателей, связанных с указанной кафедрой
+            var teachers = await _context.Teachers
+                .Where(t => t.DepartmentId == departmentId)
+                .ToListAsync();
+
+            // Преобразуем в DTO перед отправкой ответа
+            var teacherDTOs = teachers.Select(teacher => new TeacherDTO
+            {
+                TeachersId = teacher.TeachersId,
+                FirstName = teacher.FirstName,
+                LastName = teacher.LastName,
+                MiddleName = teacher.MiddleName,
+                DepartmentId = teacher.DepartmentId,
+                Degree = teacher.Degree,
+                Position = teacher.Position
+            }).ToList();
+
+            return Ok(teacherDTOs);
+        }
+
         // POST: api/Teacher
         [HttpPost]
         public async Task<IActionResult> CreateTeacher([FromBody] TeacherDTO teacherDTO)
