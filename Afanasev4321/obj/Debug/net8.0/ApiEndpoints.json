@@ -146,6 +146,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Afanasev4321.Controllers.TeacherController",
+    "Method": "GetTeachersByDepartment",
+    "RelativePath": "api/Teacher/filter-by-department/{departmentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departmentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Afanasev4321.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
