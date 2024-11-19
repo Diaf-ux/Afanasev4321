@@ -1,0 +1,20 @@
+# Временные файлы Visual Studio
+.vs/
+
+# Папка Bin и Obj
+[Bb]in/
+[Oo]bj/
+
+# Лог файлы
+*.log
+
+# Папка настроек пользователя
+*.user
+*.suo
+
+# Пакеты NuGet
+*.nupkg
+packages/
+
+# Конфигурации и секреты
+appsettings*.json
